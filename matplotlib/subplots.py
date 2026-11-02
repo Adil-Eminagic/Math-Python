@@ -12,9 +12,9 @@ fig, axs = plt.subplots(2, 2)
 
 axs[0, 0].plot(x, np.sin(x))  # plt.plot selct curretn axis, while ax.plot better approach
 axs[0, 0].plot(x, np.cos(x)) # tow graphs on same axis 
-axs[0, 0].xlabel = "Time"
-axs[0, 0].ylabel = "Pressure"
-#axs[0, 0].title = "Sound singal"
+axs[0, 0].set_xlabel("Time")
+axs[0, 0].set_ylabel("Pressure")
+axs[0, 0].set_title("Sound signal")
 
 
 
@@ -22,7 +22,7 @@ axs[0, 1].plot(x, np.cos(x))
 axs[1, 0].plot(x, x**2)
 axs[1, 1].plot(x, x**3)
 
-f = plt.figure() # creating empty figure
+#f = plt.figure() # creating empty figure
 
 plt.show()
 

@@ -24,6 +24,16 @@ fig, ax = plt.subplots(
 
 l, = ax.plot(np.angle(outputs), np.abs(outputs), label="e^(it)") # ne samo inputs jer to ne primjenuje omeaga i freq, vec samo t
 
+# ax.plot() returns:
+
+# [
+#     Line2D(
+#         x = [1, 2, 3],
+#         y = [4, 5, 6],
+#         label = "My line"
+#     )
+# ]
+
 average = complex_mean(outputs)
 
 center, = ax.plot(
