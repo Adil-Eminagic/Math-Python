@@ -7,7 +7,7 @@ s_imag = 1
 
 
 def frequency_formula(t, s_real = 0, s_imag = 1, r = 1):
-    return r * np.exp((s_real + s_imag * 1j) * t)
+    return r * np.exp(-(s_real + s_imag * 1j) * t)
 
 inputs = np.linspace(0, 8 * 2 *  np.pi, 8000)
 outputs = frequency_formula(inputs)
@@ -37,13 +37,6 @@ def update(val):
     # Update signal
     l.set_data(np.angle(outputs), np.abs(outputs))
 
-    average = np.mean(outputs)
-
-    # update the center of mass point
-    center.set_data( 
-        [np.angle(average)],
-        [np.abs(average)]
-    )
 
     fig.canvas.draw_idle()
 
